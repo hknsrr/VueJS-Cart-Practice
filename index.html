@@ -26,7 +26,7 @@
                     <input type="button" value="Arttır" @click="changeCount(listItem, +1)">
                     <input type="button" value="Azalt" @click="changeCount(listItem, -1)" v-bind:disabled="listItem.isButtonDisabled">
                     <input type="button" value="Sil" @click="removeItem(lists, key)">
-                    <span>{{listItem.count}}</span>
+                    <span v-show="listItem.count>0">{{listItem.count}} ilave</span>
                 </li>
             </ol>
         </div>
@@ -40,7 +40,7 @@
                     <input type="button" value="Arttır" @click="changeCount(cartItem, +1)">
                     <input type="button" value="Azalt" @click="changeCount(cartItem, -1)" v-bind:disabled="cartItem.isButtonDisabled">
                     <input type="button" value="Sil" @click="removeItem(carts, key)">
-                    <span>{{cartItem.count}}</span>
+                    <span v-show="cartItem.count>0">{{cartItem.count}} ilave</span>
                 </li>
             </ol>
         </div>
